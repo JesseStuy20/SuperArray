@@ -14,6 +14,7 @@ public class SuperArray {
   public boolean add(String element) {
     data[size] = element ;
     size++ ;
+    if (size == data.length) resize() ;
     return true ;
   }
 
@@ -27,5 +28,12 @@ public class SuperArray {
     return returnValue ;
   }
 
+  private void resize() {
+    String[] tempArr = data ;
+    data = new String[size+1] ;
+    for(int i=0; i<tempArr.length; i++) {
+      data[i] = tempArr[i] ;
+    }
+  }
 
 }

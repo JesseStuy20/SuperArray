@@ -1,10 +1,14 @@
 public class SuperArray {
-  private String [] data;
+  private String[] data;
   private int size;
 
-  public SuperArray(String[] array, int length) {
-    data = array ;
-    size = length ;
+  public SuperArray() {
+    data = new String[10] ;
+    size = 0 ;
   }
-  
+
+  public int size() {
+    return this.size ;
+  }
+
 }

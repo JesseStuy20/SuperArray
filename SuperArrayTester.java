@@ -8,6 +8,10 @@ public class SuperArrayTester {
     System.out.println(a1.size()) ;
     System.out.println(a1.get(0)) ;
     System.out.println(a1.get(2)) ;
+    System.out.println(a1.set(0, "x")) ;
+    System.out.println(a1.set(2, "z")) ;
+    System.out.println(a1.get(0)) ;
+    System.out.println(a1.get(2)) ;
   }
 
 }

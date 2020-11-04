@@ -2,6 +2,11 @@ public class SuperArray {
   private String[] data;
   private int size;
 
+  public SuperArray() {
+    data = new String[10] ;
+    size = 0 ;
+  }
+
   public SuperArray(int initialCapacity) {
     data = new String[initialCapacity] ;
     size = 0 ;
@@ -16,6 +21,14 @@ public class SuperArray {
     size++ ;
     if (size == data.length) resize() ;
     return true ;
+  }
+
+  public void add(int index, String element) {
+    for(int i=size+1; i>index; i--) {
+      data[i] = data[i-1] ;
+    }
+    data[index] = element ;
+    size++ ;
   }
 
   public String get(int index) {

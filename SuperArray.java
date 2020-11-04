@@ -2,8 +2,8 @@ public class SuperArray {
   private String[] data;
   private int size;
 
-  public SuperArray() {
-    data = new String[10] ;
+  public SuperArray(int initialCapacity) {
+    data = new String[initialCapacity] ;
     size = 0 ;
   }
 
@@ -30,10 +30,37 @@ public class SuperArray {
 
   private void resize() {
     String[] tempArr = data ;
-    data = new String[size+1] ;
+    data = new String[size*2] ;
     for(int i=0; i<tempArr.length; i++) {
       data[i] = tempArr[i] ;
     }
+  }
+
+  public boolean isEmpty() {
+    if (size == 0) return true ;
+    else return false ;
+  }
+
+  public void clear() {
+    data = new String[data.length] ;
+    size = 0 ;
+  }
+
+  public String toString() {
+    String result = "[" ;
+    for(int i=0; i<size-1; i++) {
+      result = result + data[i] + ", " ;
+    }
+    result = result + data[size-1] + "]" ;
+    return result ;
+  }
+
+  public boolean contains(String s) {
+    boolean result = false ;
+    for(int i=0; i<size; i++) {
+      if (s.equals(data[i])) result = true ;
+    }
+    return result ;
   }
 
 }

@@ -6,6 +6,8 @@ public class SuperArrayTester {
     System.out.println(a1.add("b")) ;
     System.out.println(a1.add("c")) ;
     System.out.println(a1.size()) ;
+    System.out.println(a1.get(0)) ;
+    System.out.println(a1.get(2)) ;
   }
 
 }

@@ -1,3 +1,4 @@
+import java.util.* ;
 public class SuperArrayTester {
   public static void main(String[] args) {
     SuperArray a1 = new SuperArray() ;
@@ -35,6 +36,7 @@ public class SuperArrayTester {
     words.add("kani") ;
     System.out.println(words.toString()) ;
     System.out.println(words.indexOf("kani")) ;
+    System.out.println(Arrays.toString(words.toArray())) ;
   }
 
 }

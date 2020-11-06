@@ -98,4 +98,12 @@ public class SuperArray {
     return result ;
   }
 
+   public String[] toArray() {
+     String[] returnArray = new String[size] ;
+     for (int i=0; i < size; i++) {
+       returnArray[i] = data[i] ;
+     }
+     return returnArray ;
+   }
+
 }

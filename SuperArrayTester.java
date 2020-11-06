@@ -32,6 +32,9 @@ public class SuperArrayTester {
     System.out.println(words.toString()) ;
     System.out.println(words.remove(3)) ;
     System.out.println(words.toString()) ;
+    words.add("kani") ;
+    System.out.println(words.toString()) ;
+    System.out.println(words.indexOf("kani")) ;
   }
 
 }

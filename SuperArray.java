@@ -85,4 +85,17 @@ public class SuperArray {
     return result ;
   }
 
+  public int indexOf(String s) {
+    int result = -1 ;
+    boolean hasString = false ;
+    for (int i=0; i<size; i++) {
+      String correctString = data[i] ;
+      if ((hasString == false) && (correctString.equals(s))) {
+        hasString = true ;
+        result = i ;
+      }
+    }
+    return result ;
+  }
+
 }

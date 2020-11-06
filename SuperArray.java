@@ -76,4 +76,13 @@ public class SuperArray {
     return result ;
   }
 
+  public String remove(int index) {
+    String result = data[index] ;
+    for (int i=index; i<size; i++) {
+      data[i] = data[i+1] ;
+    }
+    size-- ;
+    return result ;
+  }
+
 }

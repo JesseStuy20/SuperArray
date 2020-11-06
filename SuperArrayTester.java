@@ -30,6 +30,8 @@ public class SuperArrayTester {
     System.out.println(words.contains("kani")) ;
     words.add(0,"maki") ;
     System.out.println(words.toString()) ;
+    System.out.println(words.remove(3)) ;
+    System.out.println(words.toString()) ;
   }
 
 }

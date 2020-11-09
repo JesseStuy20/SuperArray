@@ -106,4 +106,17 @@ public class SuperArray {
      return returnArray ;
    }
 
+   public int lastIndexOf(String value) {
+     int result = -1 ;
+     boolean hasString = false ;
+     for (int i=size-1; i>=0; i--) {
+       String correctString = data[i] ;
+       if ((hasString == false) && (correctString.equals(value))) {
+         hasString = true ;
+         result = i ;
+       }
+     }
+     return result ;
+   }
+
 }

@@ -119,4 +119,8 @@ public class SuperArray {
      return result ;
    }
 
+   public boolean equals(SuperArray other){
+     return (toString().equals(other.toString())) ;
+   }
+
 }

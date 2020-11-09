@@ -38,6 +38,10 @@ public class SuperArrayTester {
     System.out.println(words.indexOf("kani")) ;
     System.out.println(Arrays.toString(words.toArray())) ;
     System.out.println(words.lastIndexOf("kani")) ;
+    SuperArray dupe = words ;
+    System.out.println(dupe.toString()) ;
+    System.out.println(words.equals(dupe)) ;
+    
   }
 
 }

@@ -41,6 +41,12 @@ public class SuperArrayTester {
     SuperArray dupe = words ;
     System.out.println(dupe.toString()) ;
     System.out.println(words.equals(dupe)) ;
+    try {
+      SuperArray error = new SuperArray(-1) ;
+    }
+    catch (IllegalArgumentException e) {
+      System.out.println("initialCapacity cannot be negative") ;
+    }
     
   }
 

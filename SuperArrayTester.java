@@ -73,6 +73,13 @@ public class SuperArrayTester {
     }
     error.add(0,"zero") ;
     System.out.println(error.toString()) ;
+    try {
+      error.remove(5) ;
+    }
+    catch (IndexOutOfBoundsException e) {
+      System.out.println("index is out of bounds") ;
+    }
+
   }
 
 }

@@ -27,7 +27,10 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
-    for (int i=size+1; i>index; i--) {
+    if ((index < 0) || (index > size)) {
+      throw new IndexOutOfBoundsException ("index is out of bounds") ;
+    }
+    for (int i=size; i>index; i--) {
       data[i] = data[i-1] ;
     }
     data[index] = element ;

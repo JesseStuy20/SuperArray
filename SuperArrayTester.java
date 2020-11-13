@@ -65,6 +65,14 @@ public class SuperArrayTester {
       System.out.println("index is out of bounds") ;
     }
     System.out.println(error.set(3,"four")) ;
+    try {
+      error.add(-1,"zero") ;
+    }
+    catch (IndexOutOfBoundsException e) {
+      System.out.println("index is out of bounds") ;
+    }
+    error.add(0,"zero") ;
+    System.out.println(error.toString()) ;
   }
 
 }

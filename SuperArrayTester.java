@@ -51,14 +51,20 @@ public class SuperArrayTester {
     error.add("one") ;
     error.add("two") ;
     error.add("three") ;
-    error.add("four") ;
+    error.add("five") ;
     try {
       System.out.println(error.get(4)) ;
     }
     catch (IndexOutOfBoundsException e) {
       System.out.println("index is out of bounds") ;
     }
-    
+    try {
+      System.out.println(error.set(4,"four")) ;
+    }
+    catch (IndexOutOfBoundsException e) {
+      System.out.println("index is out of bounds") ;
+    }
+    System.out.println(error.set(3,"four")) ;
   }
 
 }

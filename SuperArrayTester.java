@@ -47,6 +47,17 @@ public class SuperArrayTester {
     catch (IllegalArgumentException e) {
       System.out.println("initialCapacity cannot be negative") ;
     }
+    SuperArray error = new SuperArray(5) ;
+    error.add("one") ;
+    error.add("two") ;
+    error.add("three") ;
+    error.add("four") ;
+    try {
+      System.out.println(error.get(4)) ;
+    }
+    catch (IndexOutOfBoundsException e) {
+      System.out.println("index is out of bounds") ;
+    }
     
   }
 

@@ -27,7 +27,7 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
-    for(int i=size+1; i>index; i--) {
+    for (int i=size+1; i>index; i--) {
       data[i] = data[i-1] ;
     }
     data[index] = element ;
@@ -35,6 +35,9 @@ public class SuperArray {
   }
 
   public String get(int index) {
+    if ((index < 0) || (index >= size)) {
+      throw new IndexOutOfBoundsException ("index is out of bounds") ;
+    }
     return data[index] ;
   }
 

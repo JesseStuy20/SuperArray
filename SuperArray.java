@@ -35,6 +35,9 @@ public class SuperArray {
     }
     data[index] = element ;
     size++ ;
+    if (data.length == size) {
+      resize() ;
+    }
   }
 
   public String get(int index) {
@@ -55,7 +58,7 @@ public class SuperArray {
 
   private void resize() {
     String[] tempArr = data ;
-    data = new String[size*2] ;
+    data = new String[tempArr.length*2] ;
     for(int i=0; i<tempArr.length; i++) {
       data[i] = tempArr[i] ;
     }
